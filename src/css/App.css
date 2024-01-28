@@ -1,0 +1,20 @@
+/* Error: Top-level selectors may not contain the parent selector "&".
+ *    ,
+ * 12 |     &::-webkit-input-placeholder { color: $placeholder-color; }
+ *    |     ^
+ *    '
+ *   src\scss\_mixins.scss 12:2            placeholder-color()
+ *   src\scss\basic\_typography.scss 59:1  @import
+ *   src\scss\_style.scss 7:9              @import
+ *   src\App.scss 1:9                      root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: Top-level selectors may not contain the parent selector "&".\a    \2577 \a 12 \2502      &::-webkit-input-placeholder { color: $placeholder-color; }\a    \2502      ^\a    \2575 \a   src\\scss\\_mixins.scss 12:2            placeholder-color()\a   src\\scss\\basic\\_typography.scss 59:1  @import\a   src\\scss\\_style.scss 7:9              @import\a   src\\App.scss 1:9                      root stylesheet';
+}
