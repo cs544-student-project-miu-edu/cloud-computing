@@ -16,7 +16,7 @@ function Portfolio(props) {
       <div className="mi-portfolio-image">
         <ProgressiveImage
           src={imageUrl}
-          placeholder="/images/portfolio-image-placeholder.png"
+          placeholder="/images/blog-image-1.jpg"
         >
           {src => <img src={src} alt={title} />}
         </ProgressiveImage>

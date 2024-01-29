@@ -3,13 +3,13 @@ import Mock from "../mock";
 const database = {
   information: {
     name: 'Meseret Amare',
-    aboutContent: "I'm Java Developer.",
+    aboutContent: "Java Developer.",
     //age: 24,
-    phone: '+1 641-233-9829',
+    phone: '+1 641-632-2014',
     //nationality: 'Ethiopian',
     language: 'English, Amahric, Czech, German',
-    email: 'meseret.amare24@gmail.com',
-    address: '1000 N 4th St, Fairfield, Iowa, USA',
+    email: 'meseretamare24@gmail.com',
+    address: 'Iowa, USA',
     freelanceStatus: 'Available',
     socialLinks: {
       //facebook: 'https://facebook.com',
@@ -29,12 +29,7 @@ const database = {
     {
       title: "Application Development",
       icon: 'brush-alt',
-      details: " I can provide clean code and pixel perfect design. I also make website more & more interactive with web animations."
-    },
-    {
-      title: "Web Development",
-      icon: 'code',
-      details: "I'm a web application develper based in Iowa. I have a passion for creating intiutive and dyanmci websites. Let's make something special."
+      details: " I can provide enterprise application development using Java, Spring Boot, Microservices, AWS Cloud, Ms Azure Cloud React and more."
     }
   ],
   reviews: [
@@ -74,28 +69,28 @@ const database = {
     },
     {
       title: "MS Azure Cloud",
-      value: 70
+      value: 90
     },
     {
       title: "ReactJS",
-      value: 85
+      value: 80
     },
     {
       title: "Databases",
-      value: 96
+      value: 95
     },
     {
       title: "AWS",
-      value: 65
+      value: 90
     }
   ],
   portfolios: [
     {
       id: 1,
-      title: "Dynamic pricing",
-      subtitle: "Your All-in-one Dynamic Pricing Solution",
-      imageUrl: "/images/portfolio1-pricff.png",
-      largeImageUrl: ["/images/portfolio1-pricff-lg.png"],
+      title: "Java Application Development",
+      subtitle: "Your All-in-one Java Application Development Solutions",
+      imageUrl: "/images/blog-image-6",
+      largeImageUrl: ["/images/blog-image-6.jpg"],
       url: 'https://www.priceff.com/'
     }
   ],
@@ -103,10 +98,10 @@ const database = {
     workingExperience: [
       {
         id: 1,
-        year: "2013 - Current",
+        year: "2023 - Current",
         position: "Java Developer",
-        company: "ITC Infotech",
-        details: "I mainly worked on projects focusing on Java and supporting the front-end development whenever required."
+        company: "BlackRock, Inc.",
+        details: "Works focus on projects mainly using Java, Spring Boot, Microservices, MS Azure Cloud, Cloud based Database Systems"
       }
     ],
     educationExperience: [
@@ -120,9 +115,18 @@ const database = {
     ]
   },
   blogs: [
+    // {
+    //   id: 1,
+    //   title: 'Reasearch https://fes.upce.cz/en/user/8570',
+    //   featuredImage: '/images/blog1-depoy-s3-gitaction.webp',
+    //   filesource: '../../blog/markdown-html-supported-blog.md',
+    //   createDay: "27",
+    //   createMonth: 'January',
+    //   createYear: "2024"
+    // },
     {
       id: 2,
-      title: 'How to Deploy a React App to Amazon S3 using Github Actions',
+      title: 'Deploying a Web application to AWS S3',
       featuredImage: '/images/blog1-depoy-s3-gitaction.webp',
       filesource: '../../blog/markdown-html-supported-blog.md',
       createDay: "27",
@@ -131,9 +135,9 @@ const database = {
     }
   ],
   contactInfo: {
-    phoneNumbers: ['+1 641-233-9829'],
+    phoneNumbers: ['+1(641)-632-2014'],
     emailAddress: ['meseretamare24@gmail.com'],
-    address: "1000 N 4th St, Fairfield, Iowa, USA"
+    address: "Iowa, USA"
   }
 }
 

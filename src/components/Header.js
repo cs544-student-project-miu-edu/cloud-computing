@@ -32,7 +32,7 @@ function Header() {
           <Link to="/">
             <ProgressiveImage
               src={information.brandImage}
-              placeholder="/images/about-image-placeholder.png"
+              placeholder="/images/blog-image-1.jpg"
             >
               {(src) => <img src={src} alt="brandimage" />}
             </ProgressiveImage>
@@ -77,7 +77,7 @@ function Header() {
             <a
               rel="noopener noreferrer"
               target="_blank"
-              href="https://birukyemane.com"
+              href="https://meseret.net"
             >
               Meseret Amare
             </a>

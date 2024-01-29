@@ -73,7 +73,7 @@ function About() {
                 <div className="mi-about-image">
                   <ProgressiveImage
                     src={information.aboutImage}
-                    placeholder="/images/about-image-placeholder.png"
+                    placeholder="/images/blog-image-1.jpg"
                   >
                     {(src) => (
                       <img
@@ -137,11 +137,11 @@ function About() {
                         <b>Address</b> {information.address}
                       </li>
                     )}
-                    {!information.freelanceStatus ? null : (
+                    {/* {!information.freelanceStatus ? null : (
                       <li>
                         <b>Freelance</b> {information.freelanceStatus}
                       </li>
-                    )}
+                    )} */}
                   </ul>
                   <a href={information.cvfile} className="mi-button">
                     Download CV

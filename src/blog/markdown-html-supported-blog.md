@@ -211,7 +211,7 @@ You can now check your `S3` bucket, you would see that the build files have be
 [![s3 update](https://res.cloudinary.com/practicaldev/image/fetch/s--6rfH-j_j--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/ddzejd9f27qzclxhs08h.png)](https://res.cloudinary.com/practicaldev/image/fetch/s--6rfH-j_j--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/ddzejd9f27qzclxhs08h.png)
 
 Our site is now live!!! On the browser, go to the `Endpoint` URL `(http://<s3-bucket>.s3-website-<s3-region>.amazonaws.com)` that we came across when enabling `Static Website Hosting`. Now, any change you make to your react app will build and upload to your `S3` bucket which will update live.\
-[![Live app](/images/blog1-biruk-portfolio.png)
+[![Live app](/images/blog-image-1.jpg)
 
 You can go on to work with Github Actions by triggering an action on `Pull Request` that might run some CI tests and perform several steps before deploying to your `S3`.
 
