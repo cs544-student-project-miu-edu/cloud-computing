@@ -37,7 +37,7 @@ const database = {
       details: "I offer cloud services in AWS and MS Azure, focusing on secure, scalable cloud-native applications. Tailoring cloud integrations to meet specific business needs is a key part of my service."
     },
     {
-      title: "Cloud Computing and Integration",
+      title: "User Interface and Custom Solution Development",
       icon: 'brush-alt',
       details: "Skilled in React, I craft responsive and interactive user interfaces. I provide custom development services to align solutions with unique business strategies."
     }
@@ -97,7 +97,7 @@ const database = {
   portfolios: [
     {
       id: 1,
-      title: "Java Application Development",
+      title: "Application Development",
       subtitle: "Java Application Development Solutions",
       imageUrl: "/images/blog-image-6",
       largeImageUrl: ["/images/blog-image-6.jpg"],
