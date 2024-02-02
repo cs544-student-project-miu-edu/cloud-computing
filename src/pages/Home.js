@@ -21,7 +21,7 @@ function Home({ lightMode }) {
         <title>Home - Meseret Amare</title>
         <meta
           name="description"
-          content="Chester React Personal Portfolio Template Homepage"
+          content="Personal Portfolio Homepage"
         />
       </Helmet>
       <Suspense fallback={<Spinner />}>

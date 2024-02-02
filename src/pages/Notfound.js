@@ -11,7 +11,7 @@ function Notfound() {
         <title>404 - Meseret Amare</title>
         <meta
           name="description"
-          content="Chester React Personal Portfolio Template Not Found Page"
+          content="Personal Portfolio Not Found Page"
         />
       </Helmet>
       <Suspense fallback={<Spinner />}>

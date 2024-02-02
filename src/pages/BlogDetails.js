@@ -24,9 +24,9 @@ function BlogDetails(props) {
       .catch((err) => console.log(err));
   });
 
-  const disqusShortname = "chester-react"; //found in your Disqus.com dashboard
+  const disqusShortname = "AWS"; //found in your Disqus.com dashboard
   const disqusConfig = {
-    url: "https://tf-react-chester.now.sh/", //Homepage link of this site.
+    url: "https://aws.amazon.com//", //Homepage link of this site.
     identifier: blogId,
     title: blogFile,
   };
@@ -37,7 +37,7 @@ function BlogDetails(props) {
         <title>Blog Details - Meseret Amare</title>
         <meta
           name="description"
-          content="Chester React Personal Portfolio Template Blog Details Page"
+          content="Personal Portfolio Blog Details Page"
         />
       </Helmet>
       <Suspense fallback={<Spinner />}>

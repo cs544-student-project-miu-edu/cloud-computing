@@ -77,7 +77,7 @@ function Header() {
             <a
               rel="noopener noreferrer"
               target="_blank"
-              href="https://meseret.net"
+              href="https://www.meseret.net"
             >
               Meseret Amare
             </a>

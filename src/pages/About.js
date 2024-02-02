@@ -61,7 +61,7 @@ function About() {
         <title>About - Meseret Amare</title>
         <meta
           name="description"
-          content="Chester React Personal Portfolio Template About Page"
+          content="Personal Portfolio About Page"
         />
       </Helmet>
       <Suspense fallback={<Spinner />}>
@@ -97,10 +97,11 @@ function About() {
                   <h3>
                     I am <span className="color-theme">{information.name}</span>
                   </h3>
-                  <p>
-                  Welcome to my Java Developer portfolio, where I showcase my skills and expertise in Java development, Spring Boot, React, and cloud computing (AWS). 
-                  Explore some of my notable projects below:
-                  </p>
+                  <p>Welcome to my Java Developer Portfolio.</p>
+                  <p>Greetings! I am a professional Java Developer, deeply passionate about software development and technology.</p>
+                  <p>With a robust background in Java development, I specialize in creating efficient and scalable solutions using Java, Spring Boot, React, and cloud solutions, particularly MS Azure and AWS.</p>
+                  <p>My portfolio is a testament to my dedication and skill in these areas, presenting a range of projects that reflect my expertise and commitment to excellence.</p>
+
                   <ul>
                     {!information.name ? null : (
                       <li>

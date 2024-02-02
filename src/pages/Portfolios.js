@@ -40,7 +40,7 @@ function Portfolios() {
         <title>Portfolios - Meseret Amare</title>
         <meta
           name="description"
-          content="Chester React Personal Portfolio Template Portfolios Page"
+          content="Personal Portfolio Portfolios Page"
         />
       </Helmet>
       <Suspense fallback={<Spinner />}>

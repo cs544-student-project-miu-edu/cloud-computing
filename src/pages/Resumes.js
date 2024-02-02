@@ -30,7 +30,7 @@ function Resumes() {
         <title>Resume - Meseret Amare</title>
         <meta
           name="description"
-          content="Chester React Personal Portfolio Template Resume Page"
+          content="Personal Portfolio Resume Page"
         />
       </Helmet>
       <Suspense fallback={<Spinner />}>

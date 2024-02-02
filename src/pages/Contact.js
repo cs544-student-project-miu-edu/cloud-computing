@@ -1,15 +1,16 @@
-import axios from "axios";
 import React, { Suspense, useEffect, useState } from "react";
 import * as Icon from "react-feather";
 import { Helmet } from "react-helmet";
+import emailjs from 'emailjs-com'; 
 import Layout from "../components/Layout";
 import Sectiontitle from "../components/Sectiontitle";
 import Spinner from "../components/Spinner";
+import axios from "axios";
 
 function Contact() {
   const [phoneNumbers, setPhoneNumbers] = useState([]);
-  const [emailAddress, setEmailAddress] = useState([]);
-  const [address, setAddress] = useState([]);
+  const [emailAddress, setEmailAddress] = useState("");
+  const [address, setAddress] = useState("");
   const [formdata, setFormdata] = useState({
     name: "",
     email: "",
@@ -18,12 +19,11 @@ function Contact() {
   });
   const [error, setError] = useState(false);
   const [message, setMessage] = useState("");
-  
+
   const submitHandler = (event) => {
     event.preventDefault();
+    const { name, email, subject, message } = formdata;
 
-    const {name, email, subject, message} = formdata;
-    
     if (!name) {
       setError(true);
       setMessage("Name is required");
@@ -37,30 +37,26 @@ function Contact() {
       setError(true);
       setMessage("Message is required");
     } else {
-
-    axios.post("https://ixegyvwd8i.execute-api.us-east-1.amazonaws.com/v1/mails", {
-        name,
-        email,
-        subject,
-        message
-      })
-      .then((response) => {
-          console.log(response);
-      })
-      .catch(error => {
-          console.log(error);
-      });
-
-      setError(false);
-      setMessage("You message has been sent!!!");
+      emailjs.sendForm('service_o4wh54r', 'template_t0pu2mr', event.target, '-CjYNqxGT-9B4WULH')
+        .then((result) => {
+            console.log(result.text);
+            setMessage("Your message has been sent!!!");
+            setError(false);
+        }, (error) => {
+            console.log(error.text);
+            setMessage("Failed to send message, please try again later.");
+            setError(true);
+        });
     }
   };
+
   const handleChange = (event) => {
     setFormdata({
       ...formdata,
       [event.currentTarget.name]: event.currentTarget.value,
     });
   };
+
   const numberFormatter = (number) => {
     const phnNumber = number;
     return phnNumber;
@@ -90,7 +86,7 @@ function Contact() {
         <title>Contact - Meseret Amare</title>
         <meta
           name="description"
-          content="Chester React Personal Portfolio Template Contact Page"
+          content="Personal Portfolio Template Contact Page"
         />
       </Helmet>
       <Suspense fallback={<Spinner />}>
@@ -173,9 +169,9 @@ function Contact() {
                       </span>
                       <div className="mi-contact-infoblock-content">
                         <h6>Phone</h6>
-                        {phoneNumbers.map((phoneNumber) => (
-                          <p key={phoneNumber}>
-                            <a href={numberFormatter(phoneNumber)}>
+                        {phoneNumbers.map((phoneNumber, index) => (
+                          <p key={index}>
+                            <a href={`tel:${numberFormatter(phoneNumber)}`}>
                               {phoneNumber}
                             </a>
                           </p>
@@ -190,15 +186,15 @@ function Contact() {
                       </span>
                       <div className="mi-contact-infoblock-content">
                         <h6>Email</h6>
-                        {emailAddress.map((email) => (
-                          <p key={email}>
-                            <a href={`mailto:${email}`}>{email}</a>
-                          </p>
-                        ))}
+                        <p>
+                          <a href={`mailto:${emailAddress}`}>
+                            {emailAddress}
+                          </a>
+                        </p>
                       </div>
                     </div>
                   )}
-                  {!phoneNumbers ? null : (
+                  {!address ? null : (
                     <div className="mi-contact-infoblock">
                       <span className="mi-contact-infoblock-icon">
                         <Icon.MapPin />
