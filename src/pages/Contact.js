@@ -37,7 +37,7 @@ function Contact() {
       setError(true);
       setMessage("Message is required");
     } else {
-      emailjs.sendForm('service_o4wh54r', 'template_t0pu2mr', event.target, '-CjYNqxGT-9B4WULH')
+      emailjs.sendForm('***secret****', '***secret****', event.target, '-***secret***')
         .then((result) => {
             console.log(result.text);
             setMessage("Your message has been sent!!!");
@@ -86,7 +86,7 @@ function Contact() {
         <title>Contact - Meseret Amare</title>
         <meta
           name="description"
-          content="Personal Portfolio Template Contact Page"
+          content="Personal Portfolio Contact Page"
         />
       </Helmet>
       <Suspense fallback={<Spinner />}>
